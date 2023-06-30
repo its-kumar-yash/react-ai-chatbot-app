@@ -38,7 +38,7 @@ const Body = () => {
         ""
       )}
 
-      {/* <div ref={lastMsg} /> */}
+      <div ref={lastMsg} />
     </div>
   );
 };

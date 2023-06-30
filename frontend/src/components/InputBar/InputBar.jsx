@@ -14,7 +14,7 @@ const InputBar = () => {
         onChange={(event) => setMessageText(event.target.value)}
         onKeyUp={(event) => (event.key === "Enter" ? handleSubmission() : "")}
       />
-      <div className={styles.btn}>
+      <div className={styles.btn} onClick={handleSubmission}>
         <div className={styles.icon}>
           <Send />
         </div>
