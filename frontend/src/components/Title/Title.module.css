@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 15px;
+  background-color: #223e55;
+}
+
+.header .left {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.header .left .image {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+
+.header .left .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.header .left p {
+  font-size: 26px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 1px;
+}

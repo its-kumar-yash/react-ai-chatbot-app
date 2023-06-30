@@ -1,9 +1,11 @@
-import './App.css';
+import React from "react";
+import styles from "./App.module.css";
+import ChatBox from "./pages/ChatBox/ChatBox";
 
 function App() {
   return (
-    <div className="App">
-      HI!!
+    <div className={styles.App}>
+      <ChatBox />
     </div>
   );
 }

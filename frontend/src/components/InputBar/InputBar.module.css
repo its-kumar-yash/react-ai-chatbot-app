@@ -1,0 +1,55 @@
+.footer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.footer input {
+  flex: 1;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  border: 2px solid #696969;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: white;
+  transition: 200ms;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.footer input:focus {
+  border-color: #1d90f5;
+}
+
+.footer .btn {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #1d90f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.footer .btn:active .icon {
+  transform: translateY(1px);
+}
+
+.btn .icon {
+  border-radius: 10px;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  transition: 200ms;
+}
+
+.btn .icon svg {
+  height: 14px;
+  width: 14px;
+}
