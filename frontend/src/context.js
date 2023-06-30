@@ -16,13 +16,15 @@ const AppProvider = ({ children }) => {
   const handleSubmission = async () => {
     if (!messageText.trim() || processing) return;
 
-    setMessages((prev) => [
-      ...prev,
+    const tempMessages = [
+      ...messages,
       {
         from: "human",
         text: messageText,
       },
-    ]);
+    ];
+
+    setMessages(tempMessages);
     setMessageText("");
 
     setTimeout(() =>
@@ -39,7 +41,7 @@ const AppProvider = ({ children }) => {
           "content-type": "application/json",
         },
         body: JSON.stringify({
-          prompt: messageText,
+          messages: tempMessages.slice(-8),
         }),
       });
       setProcessing(false);

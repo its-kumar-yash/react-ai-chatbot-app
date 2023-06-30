@@ -16,20 +16,29 @@ const openaiKey = process.env.OPENAI_KEY;
 
 //create a route
 app.post("/chat", async (req, res) => {
-  const { prompt } = req.body;
+  const { messages } = req.body;
 
-  if (!prompt) {
+  if (!Array.isArray(messages) || !messages.length) {
     res.status(400).json({
       success: false,
-      message: "Prompt Required",
+      message: "Messages Required",
     });
     return;
   }
 
+  let requiredPrompt =
+    "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n" +
+    messages
+      .map((item) => `${item.from == "ai" ? "AI: " : "Human: "}${item.text}`)
+      .join("\n") +
+    "\nAI: ";
+
+  // console.log(requiredPrompt);
+
   const reqUrl = "https://api.openai.com/v1/completions";
   const reqBody = {
     model: "text-davinci-003",
-    prompt,
+    prompt: requiredPrompt,
     max_tokens: 200,
     temperature: 0.6,
   };
