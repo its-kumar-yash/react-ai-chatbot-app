@@ -39,7 +39,7 @@ app.post("/chat", async (req, res) => {
   const reqBody = {
     model: "text-davinci-003",
     prompt: requiredPrompt,
-    max_tokens: 200,
+    max_tokens: 300,
     temperature: 0.6,
   };
 
