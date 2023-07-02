@@ -4,12 +4,17 @@ import Title from "../../components/Title/Title";
 import InputBar from "../../components/InputBar/InputBar";
 import Body from "../../components/Body/Body";
 
-const ChatBox = () => {
-    return <div className={styles.container}>
+const ChatBox = (props) => {
+  return (
+    <div className={styles.main}>
+      <div className={styles.container}>
+        <h1>Welcome, {props.name}</h1>
         <Title />
         <Body />
         <InputBar />
+      </div>
     </div>
-}
+  );
+};
 
 export default ChatBox;

@@ -7,7 +7,7 @@ const Body = () => {
   const { messages, processing, lastMsg } = useGlobalContext();
 
   return (
-    <div className={styles.body}>
+    <div className={styles.bodycontainer}>
       {messages.map((msg, index) => (
         <div
           className={`${styles.message} ${
