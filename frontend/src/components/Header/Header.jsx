@@ -21,7 +21,7 @@ const Header = () => {
         </Link>
       </div>
       <div className={styles.right}>
-        <img src={chatbotBanner} alt="Resume" />
+        <img src={chatbotBanner} alt="AI" />
       </div>
     </div>
   );

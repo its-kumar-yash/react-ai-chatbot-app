@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background-color: #fff;
+  /* padding: 4rem 6rem; Remove while Media Queries */
+  padding: 4rem 6rem;
+}
+
+.heading {
+  font-weight: 500;
+  font-size: 2.1rem;
+  font-family: "Archivo", sans-serif;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    width: 60vw;
+    padding: 15px;
+    align-items: center;
+    height: 300px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 20px;
+}
+
+.card:nth-child(2){
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.image img {
+    width: 200px;
+    height: 200px;
+}
