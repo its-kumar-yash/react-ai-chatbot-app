@@ -1,0 +1,123 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding: 50px 30px;
+  background-color: #f7fafc;
+  min-height: 90vh;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  text-align: left;
+}
+
+.heading {
+  margin: 0 auto;
+  color: black;
+  font-size: 3.1rem;
+  line-height: 4.1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: "Archivo", sans-serif;
+}
+
+.heading {
+  background-clip: text;
+  background: linear-gradient(39deg, #046cf1 0%, #046cf1 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.subHeading {
+  margin: 1rem 0;
+  letter-spacing: 1px;
+  line-height: 1.3rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+
+.btn {
+  width: 10rem;
+  padding: 10px;
+  font-size: larger;
+  font-weight: 500;
+  color: #fff;
+  background: #046cf1;
+  border: none;
+  height: 3rem;
+  outline: none;
+  cursor: pointer;
+  border-radius: 7px;
+  font-family: "Archivo", sans-serif;
+}
+
+.btn:hover {
+  background: #0d4ad9;
+}
+
+.right img {
+  width: 400px;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 699px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .right img {
+    width: 350px;
+  }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 599px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .right img {
+    width: 350px;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 549px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .right img {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 499px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .right img {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 399px) {
+  .container {
+    flex-direction: column;
+  }
+  .heading {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .btn {
+    font-size: large;
+    width: 9rem;
+  }
+  .right img {
+    width: 200px;
+  }
+}

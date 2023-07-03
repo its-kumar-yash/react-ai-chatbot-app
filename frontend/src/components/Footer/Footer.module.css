@@ -1,0 +1,117 @@
+.container {
+  padding: 30px 6rem;
+  text-align: center;
+  background-color: #edf2f7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  font-size: 15px;
+  font-family: "Raleway", sans-serif;
+}
+
+.header a {
+  text-decoration: none;
+  color: #046cf1;
+}
+
+.header a:hover {
+  color: #080fd4;
+}
+
+.handles {
+  display: flex;
+  gap: 15px;
+}
+
+.handles a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #046cf1;
+}
+
+.handles a:hover {
+  color: #080fd4;
+}
+
+.handles svg {
+  height: 30px;
+}
+
+@media only screen and (min-width: 700px) and (max-width: 750px) {
+  .container {
+    padding: 20px 2rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 699px) {
+  .container {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 599px) {
+  .container {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .header {
+    font-size: 13px;
+    gap: 2px;
+  }
+
+  .handles svg {
+    height: 25px;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 549px) {
+  .container {
+    padding: 20px 2rem;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .header {
+    font-size: 13px;
+    gap: 2px;
+  }
+
+  .handles svg {
+    height: 20px;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 499px) {
+  .container {
+    padding: 10px 2rem;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .header {
+    font-size: 12px;
+    gap: 2px;
+  }
+
+  .handles svg {
+    height: 16px;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 399px) {
+  .container {
+    padding: 10px 1rem;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .header {
+    font-size: 10px;
+    gap: 2px;
+  }
+
+  .handles svg {
+    height: 16px;
+  }
+}

@@ -5,6 +5,7 @@ import ChatBox from "./pages/ChatBox/ChatBox";
 import SignUp from "./pages/SignUp/SignUp";
 import LogIn from "./pages/LogIn/LogIn";
 import { auth } from "./firebase";
+import Home from "./pages/Home/Home";
 
 function App() {
   const [userName, setUserName] = useState("");
@@ -23,7 +24,7 @@ function App() {
     <div className={styles.App}>
       <Router>
         <Routes>
-          <Route path="/" />
+          <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/chatbox" element={<ChatBox name={userName} />} />
