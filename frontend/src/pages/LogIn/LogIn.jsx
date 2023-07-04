@@ -13,7 +13,9 @@ const LogIn = () => {
   });
   const [errorMsg, setErrorMsg] = useState("");
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
-  const handleSubmission = () => {
+  const handleSubmission = (e) => {
+    e.preventDefault();
+
     if (!values.email || !values.pass) {
       setErrorMsg("Fill all fields");
       return;
@@ -24,15 +26,17 @@ const LogIn = () => {
     signInWithEmailAndPassword(auth, values.email, values.pass)
       .then(async (res) => {
         setSubmitButtonDisabled(false);
-        
+
         navigate("/chatbox");
       })
       .catch((err) => {
         setSubmitButtonDisabled(false);
         setErrorMsg(err.message);
+        let emptyvals = { email: "", pass: "" };
+        setValues(emptyvals);
       });
   };
-    
+
   return (
     <div>
       <div className={styles.container}>
@@ -41,6 +45,7 @@ const LogIn = () => {
 
           <InputControl
             label="Email"
+            value={values.email}
             onChange={(event) =>
               setValues((prev) => ({ ...prev, email: event.target.value }))
             }
@@ -48,6 +53,7 @@ const LogIn = () => {
           />
           <InputControl
             label="Password"
+            value={values.pass}
             onChange={(event) =>
               setValues((prev) => ({ ...prev, pass: event.target.value }))
             }

@@ -36,6 +36,8 @@ const SignUp = () => {
       .catch((err) => {
         setSubmitButtonDisabled(false);
         setErrorMsg(err.message);
+        let emptyvals = { name: "", email: "", pass: "" };
+        setValues(emptyvals);
       });
   };
 
@@ -46,6 +48,7 @@ const SignUp = () => {
         <InputControl
           label="Name"
           placeholder="Enter your name"
+          value={values.name}
           onChange={(event) =>
             setValues((prev) => ({ ...prev, name: event.target.value }))
           }
@@ -53,6 +56,7 @@ const SignUp = () => {
         <InputControl
           label="Email"
           placeholder="Enter email address"
+          value={values.email}
           onChange={(event) =>
             setValues((prev) => ({ ...prev, email: event.target.value }))
           }
@@ -60,6 +64,7 @@ const SignUp = () => {
         <InputControl
           label="Password"
           placeholder="Enter password"
+          value={values.pass}
           onChange={(event) =>
             setValues((prev) => ({ ...prev, pass: event.target.value }))
           }

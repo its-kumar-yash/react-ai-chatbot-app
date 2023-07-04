@@ -1,27 +1,43 @@
+/* 
+font-family: 'Castoro', serif;
+font-family: 'Chakra Petch', sans-serif;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Ubuntu Mono', monospace; 
+*/
 .container {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 5px;
 }
 
-.container label {
-  font-weight: 700;
+label {
+  font-weight: 500;
   font-size: 1rem;
-  color: #313131;
+  font-family: 'Orbitron', sans-serif;
 }
 
-.container input {
-  border-radius: 5px;
-  border: 1px solid #dddddd;
+input {
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 500;
+  border: none;
   outline: none;
-  padding: 10px 15px;
-  color: #000;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  background: #edf2f7;
 }
 
-.container input:hover {
-  border-color: #ccc;
+::placeholder {
+  color: #a7abb7;
 }
 
-.container input:focus {
-  border-color: #9900ff;
+
+input:hover {
+  border: none;
+  background: #d8e0e8;
+}
+
+input:focus {
+  background: #fff;
+  border: 2px solid #046cf1;
 }

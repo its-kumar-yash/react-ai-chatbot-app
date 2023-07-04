@@ -6,6 +6,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(../../assets/background3.jpg);
+  background-size: cover;
 }
 
 .innerBox {
@@ -19,6 +21,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  font-family: 'Orbitron', sans-serif
 }
 
 .footer {
@@ -37,7 +40,7 @@
 .footer button {
   outline: none;
   border: none;
-  background-color: #9900ff;
+  background-color: #046cf1;
   color: #fff;
   border-radius: 5px;
   font-weight: bold;
@@ -46,6 +49,7 @@
   width: 100%;
   transition: 100ms;
   cursor: pointer;
+  font-family: 'Orbitron', sans-serif
 }
 
 .footer button:disabled {
@@ -53,7 +57,7 @@
 }
 
 .footer button:hover {
-  background-color: #aa2aff;
+  background-color: #0d4ad9;
 }
 
 .footer p {
@@ -63,8 +67,30 @@
 
 .footer p span a {
   font-weight: bold;
-  color: #9900ff;
+  color: #046cf1;
   letter-spacing: 1px;
   font-size: 1rem;
   text-decoration: none;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 599px) {
+  .innerBox{
+    min-width: 420px;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 499px) {
+  .innerBox{
+    min-width: 360px;
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 399px) {
+  .container{
+    padding: 15px;
+  }
+  .innerBox{
+    min-width: auto;
+    font-size: small;
+  }
 }
