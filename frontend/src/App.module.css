@@ -7,3 +7,10 @@
 body {
   background-color: #ffffff;
 }
+
+.loadcontainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
