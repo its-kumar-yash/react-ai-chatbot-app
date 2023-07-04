@@ -1,8 +1,15 @@
+/* 
+font-family: 'Castoro', serif;
+font-family: 'Chakra Petch', sans-serif;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Ubuntu Mono', monospace; 
+*/
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 40px;
   background-color: #fff;
   /* padding: 4rem 6rem; Remove while Media Queries */
   padding: 4rem 6rem;
@@ -12,6 +19,7 @@
   font-weight: 500;
   font-size: 2.1rem;
   font-family: "Archivo", sans-serif;
+  color: #046cf1;
 }
 
 .cards {
@@ -22,25 +30,90 @@
     align-items: center;
 }
 
-
 .card {
     display: flex;
     gap: 20px;
     flex-wrap: nowrap;
     width: 60vw;
-    padding: 15px;
+    padding: 20px;
     align-items: center;
-    height: 300px;
+    min-height: auto;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     border-radius: 20px;
 }
 
 .card:nth-child(2){
     display: flex;
+    padding: 20px;
     flex-direction: row-reverse;
 }
 
 .image img {
     width: 200px;
     height: 200px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: 'Chakra Petch', sans-serif;
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+.cardTitle {
+  color: #046cf1;
+  font-family: "Archivo", sans-serif;
+}
+
+.explore .btn {
+  width: 10rem;
+  padding: 10px;
+  font-size: larger;
+  font-weight: 500;
+  color: #fff;
+  background: #046cf1;
+  border: none;
+  height: 3rem;
+  outline: none;
+  cursor: pointer;
+  border-radius: 7px;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.explore .btn:hover {
+  background: #0d4ad9;
+}
+
+@media only screen and (min-width: 550px) and (max-width: 900px) {
+  .container{
+    padding: 30px;
+  }
+  .card  {
+    width: auto; 
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 549px) {
+  .container{
+    padding: 30px;
+  }
+  .card, .card:nth-child(2)  {
+    flex-direction: column;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 399px) {
+  .container{
+    padding: 30px;
+  }
+  .card, .card:nth-child(2)  {
+    flex-direction: column;
+    width: auto;
+  }
+  .text {
+    font-size: small;
+  }
 }

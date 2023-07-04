@@ -1,3 +1,7 @@
+/* font-family: 'Castoro', serif;
+font-family: 'Chakra Petch', sans-serif;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Ubuntu Mono', monospace; */
 .container {
   width: 100%;
   display: flex;
@@ -23,7 +27,7 @@
   line-height: 4.1rem;
   font-weight: bold;
   letter-spacing: 1px;
-  font-family: "Archivo", sans-serif;
+  font-family: 'Castoro', serif;
 }
 
 .heading {
@@ -38,7 +42,7 @@
   margin: 1rem 0;
   letter-spacing: 1px;
   line-height: 1.3rem;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Chakra Petch', sans-serif;
   font-weight: 500;
 }
 
@@ -54,7 +58,7 @@
   outline: none;
   cursor: pointer;
   border-radius: 7px;
-  font-family: "Archivo", sans-serif;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 .btn:hover {
@@ -63,6 +67,12 @@
 
 .right img {
   width: 400px;
+}
+
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+  .container {
+    gap: 20px;
+  }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 699px) {
