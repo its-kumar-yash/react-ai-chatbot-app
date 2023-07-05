@@ -1,9 +1,16 @@
+/* 
+font-family: 'Castoro', serif;
+font-family: 'Chakra Petch', sans-serif;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Ubuntu Mono', monospace; 
+*/
 .footer {
   display: flex;
   gap: 10px;
   align-items: center;
   padding: 13px 20px;
-  background-color: #1d2f3f;
+  background-color: #ffffff;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 .footer input {
@@ -11,33 +18,36 @@
   outline: none;
   border: none;
   border-radius: 5px;
-  border: 2px solid #696969;
   padding: 8px 16px;
-  background-color: transparent;
-  color: white;
+  background-color: #edf2f7;
+  color: #000;
   transition: 200ms;
-  background-color: rgba(255, 255, 255, 0.1);
   font-size: 17px;
   line-height: 24px;
   font-weight: 500;
 }
 
 .footer input:focus {
-  border-color: #1d90f5;
+  border-color: #046cf1;
 }
 
 .footer .btn {
   padding: 10px;
   border-radius: 10px;
-  background-color: #1d90f5;
+  background-color: #046cf1;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  width: 4rem;
 }
 
-.footer .btn:active .icon {
-  transform: translateY(1px);
+.footer .btn:hover {
+  background-color: #0d4ad9;
+}
+
+.footer .icon:hover {
+  background-color: #0d4ad9;
 }
 
 .btn .icon {
@@ -46,7 +56,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #046cf1;
+  color: #fff;
   transition: 200ms;
 }
 

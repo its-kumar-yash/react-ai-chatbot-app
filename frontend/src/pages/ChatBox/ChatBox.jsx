@@ -9,7 +9,7 @@ import { signOut } from "firebase/auth";
 import { Link } from "react-router-dom";
 
 const ChatBox = (props) => {
-  const [userName, setUserName] = useState("");
+  const [userName, setUserName] = useState("User");
 
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -46,22 +46,24 @@ const ChatBox = (props) => {
             height="50"
             width="50"
             color="#046cf1"
-            wrapperStyle={{}}
-            wrapperClass=""
             visible={true}
             ariaLabel="three-circles-rotating"
-            outerCircleColor=""
-            innerCircleColor=""
-            middleCircleColor=""
           />
         </div>
       ) : (
         <div className={styles.main}>
           <div className={styles.container}>
-            <h1>Welcome, {userName === "" ? "User" : `${props.name}`} </h1>
-            <Link to="/login">
-              <button onClick={signOutHandler}>Sign Out</button>
-            </Link>
+            <div className={`${styles.header} ${styles.item}`}>
+              <h2>Hey, {userName === "" ? "User" : `${props.name}`} </h2>
+              <Link
+                to="/login"
+                activeClassName={styles.active}
+                className={styles.link}
+                onClick={signOutHandler}
+              >
+                {userName === "" ? "Sign In" : "Sign Out"}
+              </Link>
+            </div>
             <Title />
             <Body />
             <InputBar />

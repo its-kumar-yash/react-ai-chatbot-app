@@ -1,5 +1,6 @@
 import React from "react";
-import chatbot from "../../assets/chatbot.png";
+import chatbot from "../../assets/robot.png";
+import user from "../../assets/user1.png";
 import styles from "./Body.module.css";
 import { useGlobalContext } from "../../context";
 
@@ -24,7 +25,17 @@ const Body = () => {
           ) : (
             ""
           )}
+          
           <p className={styles.text}>{msg.text}</p>
+          {msg.from != "ai" ? (
+            <div>
+              <div className={styles.image}>
+                <img src={user} alt="user" />
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       ))}
 

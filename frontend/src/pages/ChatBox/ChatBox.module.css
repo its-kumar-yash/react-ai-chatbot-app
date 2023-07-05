@@ -1,6 +1,14 @@
+/* 
+font-family: 'Castoro', serif;
+font-family: 'Chakra Petch', sans-serif;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Ubuntu Mono', monospace; 
+*/
+
 .main {
   padding: 30px;
-  background-color: black;
+  background-image: url(../../assets/background3.jpg);
+  background-size: cover;
 }
 
 .loadcontainer {
@@ -20,4 +28,29 @@
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container .header {
+  background-color: #edf2f7;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-family: 'Chakra Petch', sans-serif;
+  align-items: center;
+}
+
+.link {
+  color: #046cf1;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.link:hover {
+  color: #0d4ad9;
+  cursor: pointer;
 }

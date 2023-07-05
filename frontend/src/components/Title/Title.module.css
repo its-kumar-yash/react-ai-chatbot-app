@@ -1,9 +1,17 @@
+/* 
+font-family: 'Castoro', serif;
+font-family: 'Chakra Petch', sans-serif;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Ubuntu Mono', monospace; 
+*/
+
 .header {
   display: flex;
   gap: 20px;
   align-items: center;
   padding: 15px;
-  background-color: #223e55;
+  background-color: #ffffff;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 .header .left {
@@ -26,7 +34,7 @@
 
 .header .left p {
   font-size: 26px;
-  font-weight: 500;
-  color: white;
+  font-weight: 600;
+  color: #046cf1;
   letter-spacing: 1px;
 }
