@@ -3,12 +3,26 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as Icons from "@fortawesome/fontawesome-free-solid";
+import { auth } from "../../firebase";
+import { signOut } from "firebase/auth";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
+  const [isSignOut, setIsSignOut] = useState(false);
 
   const handleClick = () => setClick(!click);
   const Close = () => setClick(false);
+
+  const signOutHandler = () => {
+    signOut(auth)
+    .then(() => {
+      setIsSignOut(true);
+      console.log("Sign out Successfully!");
+    })
+    .catch((err) => {
+      console.log(err.message);
+    });
+  };
 
   return (
     <>
@@ -47,18 +61,18 @@ const Navbar = () => {
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >
-                About
+                Contact Us
               </a>
             </li>
             <li className="nav-item">
-              <a
-                href="#"
+              <Link
+                to="/login"
                 activeClassName="active"
                 className="nav-links"
-                onClick={click ? handleClick : null}
+                onClick={signOutHandler}
               >
-                Contact Us
-              </a>
+                {isSignOut === true ? "SignIn or LogIn" : "Sign Out"}
+              </Link>
             </li>
           </ul>
           <div className="nav-icon" onClick={handleClick}>

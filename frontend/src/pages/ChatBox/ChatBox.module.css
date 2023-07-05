@@ -3,6 +3,13 @@
   background-color: black;
 }
 
+.loadcontainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   margin: 0 auto;
   height: calc(100vh - 60px);

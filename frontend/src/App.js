@@ -31,8 +31,8 @@ function App() {
       {loading ? (
         <div className={styles.loadcontainer}>
           <ThreeCircles
-            height="100"
-            width="100"
+            height="50"
+            width="50"
             color="#046cf1"
             wrapperStyle={{}}
             wrapperClass=""
