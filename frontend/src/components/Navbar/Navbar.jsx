@@ -55,14 +55,14 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <a
-                href="#"
+              <Link
+                to="/contactus"
                 activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >
                 Contact Us
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <Link

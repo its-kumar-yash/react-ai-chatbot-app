@@ -37,6 +37,9 @@ const SignUp = () => {
         setErrorMsg(err.message);
         let emptyvals = { name: "", email: "", pass: "" };
         setValues(emptyvals);
+        setTimeout(() => {
+          setErrorMsg("");
+        }, 3000);
       });
   };
 

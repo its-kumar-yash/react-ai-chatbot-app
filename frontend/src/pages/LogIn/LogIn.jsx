@@ -34,6 +34,9 @@ const LogIn = () => {
         setErrorMsg(err.message);
         let emptyvals = { email: "", pass: "" };
         setValues(emptyvals);
+        setTimeout(() => {
+          setErrorMsg("");
+        }, 3000);
       });
   };
 
