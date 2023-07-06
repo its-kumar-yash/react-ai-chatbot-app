@@ -14,8 +14,14 @@ app.use(express.json());
 
 const openaiKey = process.env.OPENAI_KEY;
 
+app.get("/", async (req, res) => {
+  res.status(200).send({
+    message: "Hello, world!",
+  });
+});
+
 //create a route
-app.post("/chat", async (req, res) => {
+app.post("/", async (req, res) => {
   const { messages } = req.body;
 
   if (!Array.isArray(messages) || !messages.length) {
@@ -39,7 +45,7 @@ app.post("/chat", async (req, res) => {
   const reqBody = {
     model: "text-davinci-003",
     prompt: requiredPrompt,
-    max_tokens: 300,
+    max_tokens: 3000,
     temperature: 0.6,
   };
 
