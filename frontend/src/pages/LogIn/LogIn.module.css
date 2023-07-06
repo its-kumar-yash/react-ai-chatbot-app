@@ -62,6 +62,7 @@ font-family: 'Ubuntu Mono', monospace;
   width: 100%;
   transition: 100ms;
   cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .footer button:disabled {
