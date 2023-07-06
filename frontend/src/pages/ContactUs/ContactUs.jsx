@@ -7,6 +7,7 @@ import { addDoc, collection } from "firebase/firestore";
 import { ThreeCircles } from "react-loader-spinner";
 
 const ContactUs = () => {
+  const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -27,6 +28,20 @@ const ContactUs = () => {
   const handleSubmission = () => {
     if (!values.name || !values.email || !values.message) {
       setErrorMsg("Please Fill all fields");
+      setTimeout(() => {
+        setErrorMsg("");
+      }, 3000);
+      return;
+    }
+    else if (!/^[^a-zA-Z]*$/.test(values.name)){
+      setErrorMsg("Enter a valid name");
+      setTimeout(() => {
+        setErrorMsg("");
+      }, 3000);
+      return;
+    }
+    else if(!regex.test(values.email)){
+      setErrorMsg("Enter a valid email");
       setTimeout(() => {
         setErrorMsg("");
       }, 3000);

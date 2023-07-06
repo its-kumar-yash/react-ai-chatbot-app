@@ -8,6 +8,7 @@ import { ThreeCircles } from "react-loader-spinner";
 
 const SignUp = () => {
   const navigate = useNavigate();
+  const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -25,8 +26,30 @@ const SignUp = () => {
   }, []);
 
   const handleSubmission = () => {
+    
     if (!values.name || !values.email || !values.pass) {
       setErrorMsg("Please Fill all fields");
+      setTimeout(() => {
+        setErrorMsg("");
+      }, 3000);
+      return;
+    }
+    else if (!/^[^a-zA-Z]*$/.test(values.name)){
+      setErrorMsg("Enter a valid name");
+      setTimeout(() => {
+        setErrorMsg("");
+      }, 3000);
+      return;
+    }
+    else if(!regex.test(values.email)){
+      setErrorMsg("Enter a valid email");
+      setTimeout(() => {
+        setErrorMsg("");
+      }, 3000);
+      return;
+    }
+    else if(values.pass.length < 6){
+      setErrorMsg("Password should have Minimum six characters");
       setTimeout(() => {
         setErrorMsg("");
       }, 3000);
