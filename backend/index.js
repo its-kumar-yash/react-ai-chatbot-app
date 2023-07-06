@@ -33,7 +33,7 @@ app.post("/chat", async (req, res) => {
       .join("\n") +
     "\nAI: ";
 
-  console.log(requiredPrompt);
+  // console.log(requiredPrompt);
 
   const reqUrl = "https://api.openai.com/v1/completions";
   const reqBody = {
