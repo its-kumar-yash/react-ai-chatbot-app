@@ -12,7 +12,8 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.header}>
         <p>
-          Copyright © 2023 IntelliChat. Designed By <a href="https://www.linkedin.com/in/its-kumar-yash/">Yash Kumar</a>
+          Copyright © 2023 IntelliChat. Designed By{" "}
+          <a href="https://www.linkedin.com/in/its-kumar-yash/">Yash Kumar</a>
         </p>
       </div>
       <div className={styles.handles}>

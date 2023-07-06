@@ -8,7 +8,9 @@ import { Link } from "react-router-dom";
 const Main = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.heading}><h3>Features</h3></div>
+      <div className={styles.heading}>
+        <h3>Features</h3>
+      </div>
       <div className={styles.cards}>
         <div className={styles.card}>
           <div className={styles.image}>

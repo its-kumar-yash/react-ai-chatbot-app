@@ -26,12 +26,12 @@ const ChatBox = (props) => {
         setUserName("");
       }
     });
-  }, [userName]);
+  }, []);
 
   const signOutHandler = () => {
     signOut(auth)
       .then(() => {
-        console.log("Sign out Successfully!");
+        alert("Sign out Successfully!");
       })
       .catch((err) => {
         console.log(err.message);
@@ -54,7 +54,7 @@ const ChatBox = (props) => {
         <div className={styles.main}>
           <div className={styles.container}>
             <div className={`${styles.header} ${styles.item}`}>
-              <h2>Hey, {userName === "" ? "User" : `${props.name}`} </h2>
+              <h2>Hey, {userName === null ? "User" : `${props.name}`} </h2>
               <Link
                 to="/login"
                 activeClassName={styles.active}

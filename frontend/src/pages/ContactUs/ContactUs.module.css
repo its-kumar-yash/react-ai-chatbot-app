@@ -1,3 +1,9 @@
+.loadcontainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .container {
   height: 100%;
   min-height: 100vh;
@@ -32,11 +38,11 @@
 .messageBox label {
   font-weight: 500;
   font-size: 1rem;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
 }
 
 .messageBox textarea {
-  font-family: 'Chakra Petch', sans-serif;
+  font-family: "Chakra Petch", sans-serif;
   font-weight: 500;
   border: none;
   outline: none;
@@ -79,7 +85,7 @@ textarea:focus {
 .footer .success {
   font-weight: bold;
   font-size: 0.875rem;
-  color: #22ff00;
+  color: #00ff1a;
   text-align: center;
 }
 

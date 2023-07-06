@@ -15,13 +15,13 @@ const Navbar = () => {
 
   const signOutHandler = () => {
     signOut(auth)
-    .then(() => {
-      setIsSignOut(true);
-      console.log("Sign out Successfully!");
-    })
-    .catch((err) => {
-      console.log(err.message);
-    });
+      .then(() => {
+        setIsSignOut(true);
+        alert("Sign out Successfully!");
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
   };
 
   return (
@@ -29,14 +29,14 @@ const Navbar = () => {
       <div className={click ? "main-container" : ""} onClick={() => Close()} />
       <nav className="navbar" onClick={(e) => e.stopPropagation()}>
         <div className="nav-container">
-          <a href="#" className="nav-logo">
+          <Link to="/home" className="nav-logo">
             IntelliChat
             {/* <FontAwesomeIcon icon={Icons.fax} size="6px" /> */}
-          </a>
+          </Link>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <Link
-                to="/"
+                to="/home"
                 activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
@@ -45,13 +45,13 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-            <Link
+              <Link
                 to="/chatbox"
                 activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >
-                ChatBox
+                ChatBot
               </Link>
             </li>
             <li className="nav-item">

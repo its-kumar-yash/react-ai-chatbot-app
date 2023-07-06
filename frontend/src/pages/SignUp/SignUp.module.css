@@ -1,3 +1,10 @@
+.loadcontainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   height: 100%;
   min-height: 100vh;
@@ -20,7 +27,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  font-family: 'Orbitron', sans-serif
+  font-family: "Orbitron", sans-serif;
 }
 
 .footer {
@@ -48,7 +55,7 @@
   width: 100%;
   transition: 100ms;
   cursor: pointer;
-  font-family: 'Orbitron', sans-serif
+  font-family: "Orbitron", sans-serif;
 }
 
 .footer button:disabled {
@@ -73,22 +80,22 @@
 }
 
 @media only screen and (min-width: 500px) and (max-width: 599px) {
-  .innerBox{
+  .innerBox {
     min-width: 420px;
   }
 }
 
 @media only screen and (min-width: 400px) and (max-width: 499px) {
-  .innerBox{
+  .innerBox {
     min-width: 360px;
   }
 }
 
 @media only screen and (min-width: 200px) and (max-width: 399px) {
-  .container{
+  .container {
     padding: 15px;
   }
-  .innerBox{
+  .innerBox {
     min-width: auto;
     font-size: small;
   }

@@ -47,8 +47,8 @@ function App() {
       ) : (
         <Router>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/signup" element={<SignUp />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<SignUp />} />
             <Route path="/login" element={<LogIn />} />
             <Route path="/chatbox" element={<ChatBox name={userName} />} />
             <Route path="/contactus" element={<ContactUs />} />
