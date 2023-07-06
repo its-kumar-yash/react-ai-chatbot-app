@@ -34,7 +34,7 @@ const SignUp = () => {
       }, 3000);
       return;
     }
-    else if (!/^[^a-zA-Z]*$/.test(values.name)){
+    else if (/^[^a-zA-Z]*$/.test(values.name)){
       setErrorMsg("Enter a valid name");
       setTimeout(() => {
         setErrorMsg("");
