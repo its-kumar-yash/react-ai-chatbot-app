@@ -12,7 +12,6 @@ const ContactUs = () => {
     email: "",
     message: "",
   });
-
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const [isSubmitted, setIsSubmitted] = useState("");

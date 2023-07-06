@@ -13,11 +13,11 @@ font-family: 'Ubuntu Mono', monospace;
 label {
   font-weight: 500;
   font-size: 1rem;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Orbitron', sans-serif !important;
 }
 
 input {
-  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Chakra Petch', sans-serif !important;
   font-weight: 500;
   border: none;
   outline: none;
@@ -29,6 +29,7 @@ input {
 
 ::placeholder {
   color: #a7abb7;
+  font-family: 'Chakra Petch', sans-serif !important;
 }
 
 
