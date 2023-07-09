@@ -4,6 +4,18 @@
 
 ## 📸Preview
 
+### SignUp Page
+<img src="./frontend/src/assets/SignUpPreview.png" alt="signup">
+
+### LogIn Page
+<img src="./frontend/src/assets/LoginPreview.png" alt="login">
+
+### Home Page
+<img src="./frontend/src/assets/HomePreview.png" alt="Home">
+
+### ChatBot UI
+<img src="./frontend/src/assets/ChatBoxPreview.png" alt="chatbot">
+
 
 ## ✨Features
 
@@ -32,6 +44,7 @@
 - `Nodemon`: A development tool that automatically restarts the server when changes are made to the code.
 
 ## ✨Prerequisites
+
 Before getting started, make sure you have the following prerequisites installed:
 
 - `Node.js`: Install Node.js from the official [website](https://nodejs.org).
@@ -46,28 +59,30 @@ To run the `IntelliChat` locally, follow these steps:
 2. Navigate to the project directory: `cd react-ai-chatbot-app`
 3. Install the dependencies: `npm install`
 4. Create a `.env` file in the backend folder and add your OpenAI API key:
-    ```bash
-    OPENAI_KEY=YOUR_API_KEY
-    ```
-4. Start the frontend server: 
-    ```bash
-    cd frontend
-    npm start
-    ```
-4. Start the frontend server: 
-    ```bash
-    cd backend
-    npm start
-    ```
-5. Open your web browser and visit [localhost:3000](http://localhost:3000) to access the frontend and [localhost:5500](http://localhost:5500) to access the backend.
+   ```bash
+   OPENAI_KEY=YOUR_API_KEY
+   ```
+5. Start the frontend server:
+   ```bash
+   cd frontend
+   npm start
+   ```
+6. Start the frontend server:
+   ```bash
+   cd backend
+   npm start
+   ```
+7. Open your web browser and visit [localhost:3000](http://localhost:3000) to access the frontend and [localhost:5500](http://localhost:5500) to access the backend.
 
 ## 📑Resources
+
 - [OpenAI API documentation](https://platform.openai.com/docs/introduction)
 - [Firebase documentation](https://firebase.google.com/docs)
 
-
 ## ✨Credits
+
 `IntelliChat` is developed and maintained by `Yash`. Acknowledgements and credits to Open AI API Developers and Muhammad Dani for the [design](https://dribbble.com/shots/20478647-RoboReply-Chatbot-Landing-Page) inspiration.
 
 ## 📧Contacts
+
 For any inquiries or feedback, please contact [Here](mailto:its.yash.kumar23@gmail.com).
