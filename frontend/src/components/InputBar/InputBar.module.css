@@ -65,3 +65,15 @@ font-family: 'Ubuntu Mono', monospace;
   height: 14px;
   width: 14px;
 }
+
+@media only screen and (min-width: 300px) and (max-width: 349px) {
+  .footer {
+    padding: 12px 8px;
+  }
+  .footer input{
+    width: 1rem;
+  }
+  .footer .btn{
+    width: 3rem;
+  }
+}  
