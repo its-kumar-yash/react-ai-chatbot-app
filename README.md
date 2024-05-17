@@ -57,22 +57,32 @@ To run the `IntelliChat` locally, follow these steps:
 
 1. Clone the repository: `https://github.com/its-kumar-yash/react-ai-chatbot-app.git`
 2. Navigate to the project directory: `cd react-ai-chatbot-app`
-3. Install the dependencies: `npm install`
-4. Create a `.env` file in the backend folder and add your OpenAI API key:
+3. Install the frontend dependencies:
+   ```bash
+   cd frontend
+   npm install
+   ```
+5. Install the backend dependencies:
+
+   ```bash
+   cd backend
+   npm install
+   ```
+6. Create a `.env` file in the backend folder and add your OpenAI API key:
    ```bash
    OPENAI_KEY=YOUR_API_KEY
    ```
-5. Start the frontend server:
+7. Start the frontend server:
    ```bash
    cd frontend
    npm start
    ```
-6. Start the frontend server:
+8. Start the frontend server:
    ```bash
    cd backend
    npm start
    ```
-7. Open your web browser and visit [localhost:3000](http://localhost:3000) to access the frontend and [localhost:5500](http://localhost:5500) to access the backend.
+9. Open your web browser and visit [localhost:3000](http://localhost:3000) to access the frontend and [localhost:5500](http://localhost:5500) to access the backend.
 
 ## 📑Resources
 
