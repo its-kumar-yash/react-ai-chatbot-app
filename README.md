@@ -1,6 +1,6 @@
 # 🤖IntelliChat - AI Powered Chatbot
 
-`IntelliChat` is a OpenAI powered tool that brings chatbots to the next level of sophistication and intelligence. `IntelliChat` can engage in multi-turn conversations, remembering previous interactions and providing relevant follow-up responses.
+`IntelliChat` is an OpenAI powered tool that brings chatbots to the next level of sophistication and intelligence. `IntelliChat` can engage in multi-turn conversations, remembering previous interactions and providing relevant follow-up responses.
 
 ## 📸Preview
 
