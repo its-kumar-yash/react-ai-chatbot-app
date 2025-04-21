@@ -7,7 +7,7 @@ dotenv.config();
 
 // Initialize Express app
 const app = express();
-
+const port = process.env.PORT || 4000;
 // Middleware
 app.use(cors());
 app.use(express.json());
@@ -68,4 +68,4 @@ app.post("/", async (req, res) => {
   }
 });
 
-app.listen(5500, () => console.log("Server is up on 5500"));
+app.listen(port, () => console.log("Server is up on 5500"));
