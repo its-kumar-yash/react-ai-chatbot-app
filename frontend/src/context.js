@@ -47,14 +47,16 @@ const AppProvider = ({ children }) => {
       setProcessing(false);
 
       const data = await res.json();
-      // console.log(data);
+      console.log(data);
+
       const ans = data.data;
+      console.log(ans);
 
       setMessages((prev) => [
         ...prev,
         {
           from: "ai",
-          text: ans.trim(),
+          text: ans?.trim(),
         },
       ]);
     } catch (err) {

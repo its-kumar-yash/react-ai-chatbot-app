@@ -1,18 +1,19 @@
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const axios = require("axios");
+const Groq = require("groq-sdk");
 
 dotenv.config();
 
-//call express to initialize app
+// Initialize Express app
 const app = express();
 
-//for request sharing
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-const openaiKey = process.env.OPENAI_KEY;
+// Initialize Groq client
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 app.get("/", async (req, res) => {
   res.status(200).send({
@@ -20,7 +21,7 @@ app.get("/", async (req, res) => {
   });
 });
 
-//create a route
+// Main route for chat completions
 app.post("/", async (req, res) => {
   const { messages } = req.body;
 
@@ -32,33 +33,27 @@ app.post("/", async (req, res) => {
     return;
   }
 
-  let requiredPrompt =
-    "The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n" +
-    messages
-      .map((item) => `${item.from == "ai" ? "AI: " : "Human: "}${item.text}`)
-      .join("\n") +
-    "\nAI: ";
+  // Convert messages to the format expected by Groq
+  const formattedMessages = messages.map(item => ({
+    role: item.from === "ai" ? "assistant" : "user",
+    content: item.text
+  }));
 
-  // console.log(requiredPrompt);
-
-  const reqUrl = "https://api.openai.com/v1/completions";
-  const reqBody = {
-    model: "text-davinci-003",
-    prompt: requiredPrompt,
-    max_tokens: 3000,
-    temperature: 0.6,
-  };
+  // Add system message at the beginning
+  formattedMessages.unshift({
+    role: "system",
+    content: "The assistant is helpful, creative, clever, and very friendly."
+  });
 
   try {
-    const response = await axios.post(reqUrl, reqBody, {
-      headers: {
-        "content-type": "application/json",
-        authorization: `Bearer ${openaiKey}`,
-      },
+    const chatCompletion = await groq.chat.completions.create({
+      messages: formattedMessages,
+      model: "llama-3.3-70b-versatile", // Updated to the latest model from the docs
+      max_tokens: 3000,
+      temperature: 0.6,
     });
 
-    const data = response.data;
-    const answer = Array.isArray(data.choices) ? data.choices[0]?.text : "";
+    const answer = chatCompletion.choices[0]?.message?.content || "";
 
     res.status(200).json({
       success: true,
